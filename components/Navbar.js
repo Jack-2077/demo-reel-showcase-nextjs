@@ -24,8 +24,8 @@ export default function Navbar() {
             <div className={styles.dropdown}>
               <a className={styles.dropbtn}>Photo</a>
               <div className={styles['dropdown-content']}>
-                <Link href='/Photos/2021'>2021</Link>
-                <Link href='/Photos/2022'>2022</Link>
+                <Link href='/Photo/2021'>2021</Link>
+                <Link href='/Photo/2022'>2022</Link>
               </div>
             </div>
           </li>
