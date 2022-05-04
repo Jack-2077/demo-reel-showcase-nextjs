@@ -47,7 +47,7 @@ import grey4 from '../public/assests/PROJECTS/07.PORSCHE_SINGER/04b&w.jpg';
 
 import grey5 from '../public/assests/PROJECTS/11.CRITTER/02_085.jpg';
 
-// import video1 from '../public/assests/PROJECTS/01.GASSTATION/GS01.mp4';
+//import video1 from '../public/assests/PROJECTS/01.GASSTATION/GS01.mp4';
 // import video2 from '../public/assests/PROJECTS/02.ATELIER/ATLR01.mp4';
 // import video3 from '../public/assests/PROJECTS/03.917/01.mp4';
 // import video4 from '../public/assests/PROJECTS/04.VELAR/VLR01.mp4';
@@ -97,49 +97,189 @@ export const REEL_IMAGES = [
   {
     image: pic1,
     title: 'GASSTATION',
+    set: {
+      main: [pic1],
+      grey: [grey1],
+      video: '/assests/PROJECTS/01.GASSTATION/GS01.mp4',
+    },
   },
   {
     image: pic3,
     title: '917',
+    set: {
+      main: [pic3, pic4, pic5, pic6, pic7, pic8, pic9],
+      video: '/assests/PROJECTS/03.917/01.mp4',
+    },
   },
   {
     image: pic28,
     title: 'CRITTER',
+    set: {
+      main: [pic28],
+      grey: [grey5],
+      video: '/assests/PROJECTS/11.CRITTER/02_085.jpg',
+    },
   },
   {
     image: pic2,
     title: 'ATELIER',
+    set: {
+      main: [pic2],
+      grey: [grey2],
+      video: '/assests/PROJECTS/02.ATELIER/ATLR01.mp4',
+    },
   },
   {
     image: pic14,
     title: 'HALLOWEEN',
+    set: {
+      main: [pic14, pic15],
+      video: '/assests/PROJECTS/06.HALLOWEEN/HALOWEEN01.mp4',
+    },
   },
   {
     image: pic16,
     title: 'PORSCHE SINGER',
+    set: {
+      main: [pic16],
+      grey: [grey4],
+      video: '/assests/PROJECTS/07.PORSCHE_SINGER/04.gif',
+    },
   },
   {
     image: pic24,
     title: 'RESTLESS',
+    set: {
+      main: [pic24],
+      video: '/assests/PROJECTS/09.RESTLESS/FINAL_EDIT_AUG18_v003_FINAL.mp4',
+    },
   },
   {
     image: pic10,
     title: 'VELAR',
+    set: {
+      main: [pic10],
+      grey: [grey3],
+      video: '/assests/PROJECTS/04.VELAR/VLR01.mp4',
+    },
   },
   {
     image: pic17,
     title: 'ROVER',
+    set: {
+      main: [pic17, pic18, pic19, pic20, pic21, pic22, pic23],
+    },
   },
   {
     image: pic11,
     title: 'SPACE ROVER',
+    set: {
+      main: [pic11, pic12, pic13],
+      video: '/assests/PROJECTS/05.ROVER/ROVER01.mp4',
+    },
   },
   {
     image: pic25,
     title: 'TOWNCAR',
+    set: {
+      main: [pic25, pic26, pic27],
+    },
   },
 ];
 
+export const REEL_IMAGES2 = {
+  GASSTATION: {
+    image: pic1,
+    title: 'GASSTATION',
+    set: {
+      main: [pic1],
+      grey: [grey1],
+      video: '/assests/PROJECTS/01.GASSTATION/GS01.mp4',
+    },
+  },
+  917: {
+    image: pic3,
+    title: '917',
+    set: {
+      main: [pic3, pic4, pic5, pic6, pic7, pic8, pic9],
+      video: '/assests/PROJECTS/03.917/01.mp4',
+    },
+  },
+  CRITTER: {
+    image: pic28,
+    title: 'CRITTER',
+    set: {
+      main: [pic28],
+      grey: [grey5],
+      video: '/assests/PROJECTS/11.CRITTER/02_085.jpg',
+    },
+  },
+  ATELIER: {
+    image: pic2,
+    title: 'ATELIER',
+    set: {
+      main: [pic2],
+      grey: [grey2],
+      video: '/assests/PROJECTS/02.ATELIER/ATLR01.mp4',
+    },
+  },
+  HALLOWEEN: {
+    image: pic14,
+    title: 'HALLOWEEN',
+    set: {
+      main: [pic14, pic15],
+      video: '/assests/PROJECTS/06.HALLOWEEN/HALOWEEN01.mp4',
+    },
+  },
+  PORSCHESINGER: {
+    image: pic16,
+    title: 'PORSCHE SINGER',
+    set: {
+      main: [pic16],
+      grey: [grey4],
+      video: '/assests/PROJECTS/07.PORSCHE_SINGER/04.gif',
+    },
+  },
+  RESTLESS: {
+    image: pic24,
+    title: 'RESTLESS',
+    set: {
+      main: [pic24],
+      video: '/assests/PROJECTS/09.RESTLESS/FINAL_EDIT_AUG18_v003_FINAL.mp4',
+    },
+  },
+  VELAR: {
+    image: pic10,
+    title: 'VELAR',
+    set: {
+      main: [pic10],
+      grey: [grey3],
+      video: '/assests/PROJECTS/04.VELAR/VLR01.mp4',
+    },
+  },
+  ROVER: {
+    image: pic17,
+    title: 'ROVER',
+    set: {
+      main: [pic17, pic18, pic19, pic20, pic21, pic22, pic23],
+    },
+  },
+  SPACEROVER: {
+    image: pic11,
+    title: 'SPACE ROVER',
+    set: {
+      main: [pic11, pic12, pic13],
+      video: '/assests/PROJECTS/05.ROVER/ROVER01.mp4',
+    },
+  },
+  TOWNCAR: {
+    image: pic25,
+    title: 'TOWNCAR',
+    set: {
+      main: [pic25, pic26, pic27],
+    },
+  },
+};
 // export const HOME_SET = [
 //   {
 //     image: set1[0],

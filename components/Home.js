@@ -1,5 +1,6 @@
-import React, { memo } from 'react';
+import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Grid } from '@mui/material';
 import { REEL_IMAGES } from '../pages/Assests_imports';
 
@@ -8,11 +9,15 @@ const Homepage = () => {
     <Grid container spacing={0}>
       {REEL_IMAGES.map((item) => (
         <Grid item xs={12} key={item.title}>
-          <Image alt='ssass' src={item.image} layout='responsive' />
+          <Link href={`/work/${item.title}`}>
+            <a>
+              <Image src={item.image} layout='responsive' />
+            </a>
+          </Link>
         </Grid>
       ))}
     </Grid>
   );
 };
 
-export default memo(Homepage);
+export default Homepage;
