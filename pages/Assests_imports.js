@@ -117,7 +117,7 @@ export const REEL_IMAGES = [
     set: {
       main: [pic28],
       grey: [grey5],
-      video: '/assests/PROJECTS/11.CRITTER/02_085.jpg',
+      video: '/assests/PROJECTS/11.CRITTER/CRITTER01.mp4',
     },
   },
   {
@@ -211,7 +211,7 @@ export const REEL_IMAGES2 = {
     set: {
       main: [pic28],
       grey: [grey5],
-      video: '/assests/PROJECTS/11.CRITTER/02_085.jpg',
+      video: '/assests/PROJECTS/11.CRITTER/CRITTER01.mp4',
     },
   },
   ATELIER: {
