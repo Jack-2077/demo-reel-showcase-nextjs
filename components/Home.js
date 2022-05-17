@@ -11,7 +11,7 @@ const Homepage = () => {
         <Grid item xs={12} key={item.title}>
           <Link href={`/work/${item.title}`}>
             <a>
-              <Image src={item.image} layout='responsive' />
+              <Image src={item.image} layout='responsive' priority />
             </a>
           </Link>
         </Grid>

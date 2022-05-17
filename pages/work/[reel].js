@@ -15,6 +15,7 @@ export default function reel() {
 
       const reelName = reel.replaceAll(' ', '');
       const demoReel = REEL_IMAGES2[reelName];
+
       setReelInfo(demoReel);
     }
   }, [router.isReady]);
@@ -23,19 +24,18 @@ export default function reel() {
     <Grid container spacing={0}>
       {reelInfo?.set.main?.map((item, i) => (
         <Grid item xs={12} key={i}>
-          <Image src={item} layout='responsive' />
+          <Image src={item} layout='responsive' priority={i === 0} />
         </Grid>
       ))}
       {reelInfo?.set.grey?.map((item, i) => (
         <Grid item xs={12} key={i}>
-          <Image src={item} layout='responsive' />
+          <Image src={item} layout='responsive' priority={i === 0} />
         </Grid>
       ))}
       {reelInfo?.set.video && (
         <Grid item xs={12}>
           <video autoPlay muted>
             <source src={reelInfo.set.video} type='video/mp4' />
-            <Image src='/logo.png' height={20} width={20} />
           </video>
         </Grid>
       )}
