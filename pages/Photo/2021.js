@@ -10,7 +10,7 @@ export default function Photo2021() {
       {images_20.map((images) =>
         images.map((image, i) => (
           <Grid item xs={12} key={i}>
-            <Image src={image} layout='responsive' />
+            <Image src={image} layout='responsive' priority={i < 5} />
           </Grid>
         ))
       )}
