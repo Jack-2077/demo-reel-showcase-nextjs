@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
-import { REEL_IMAGES2 } from '../Assests_imports';
+import { REEL_IMAGES } from '../Assests_imports';
 import { Grid } from '@mui/material';
 
 export default function reel() {
@@ -14,7 +14,7 @@ export default function reel() {
       const { reel } = router.query;
 
       const reelName = reel.replaceAll(' ', '');
-      const demoReel = REEL_IMAGES2[reelName];
+      const demoReel = REEL_IMAGES[reelName];
 
       setReelInfo(demoReel);
     }
