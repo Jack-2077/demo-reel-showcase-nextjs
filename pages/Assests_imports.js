@@ -295,52 +295,6 @@ export const images_21 = [
   october_images,
 ];
 
-//import video1 from '../public/assests/PROJECTS/01.GASSTATION/GS01.mp4';
-// import video2 from '../public/assests/PROJECTS/02.ATELIER/ATLR01.mp4';
-// import video3 from '../public/assests/PROJECTS/03.917/01.mp4';
-// import video4 from '../public/assests/PROJECTS/04.VELAR/VLR01.mp4';
-// import video5 from '../public/assests/PROJECTS/05.ROVER/ROVER01.mp4';
-// import video6 from '../public/assests/PROJECTS/06.HALLOWEEN/HALOWEEN01.mp4';
-// import video7 from '../public/assests/PROJECTS/07.PORSCHE_SINGER/04.gif';
-// import video8 from '../public/assests/PROJECTS/09.RESTLESS/FINAL_EDIT_AUG18_v003_FINAL.mp4';
-// import video9 from '../public/assests/PROJECTS/11.CRITTER/CRITTER01.mp4';
-
-// const set1 = [[pic1], [grey1], [video1]];
-
-// const set2 = [[pic2], [grey2], [video2]];
-
-// const set3 = [[pic3, pic4, pic5, pic6, pic7, pic8, pic9], [], [video3]];
-
-// const set4 = [[pic10], [grey3], [video4]];
-
-// const set5 = [[pic11, pic12, pic13], [], [video5]];
-
-// const set6 = [[pic14, pic15], [], [video6]];
-
-// const set7 = [[pic16], [grey4], [video7]];
-
-// const set8 = [[pic17, pic18, pic19, pic20, pic21, pic22, pic23], [], []];
-
-// const set9 = [[pic24], [], [video8]];
-
-// const set10 = [[pic25, pic26, pic27], [], []];
-
-// const set11 = [[pic28], [grey5], [video9]];
-
-// const MAIN_SET = [
-//   set1,
-//   set2,
-//   set3,
-//   set4,
-//   set5,
-//   set6,
-//   set7,
-//   set8,
-//   set9,
-//   set10,
-//   set11,
-// ];
-
 export const REEL_IMAGES = [
   {
     image: pic1,
@@ -528,51 +482,3 @@ export const REEL_IMAGES2 = {
     },
   },
 };
-// export const HOME_SET = [
-//   {
-//     image: set1[0],
-//     title: 'GASSTATION',
-//   },
-//   {
-//     image: set3[0][0],
-//     title: '917',
-//   },
-//   {
-//     image: set11[0],
-//     title: 'CRITTER',
-//   },
-//   {
-//     image: set2[0],
-//     title: 'ATELIER',
-//   },
-//   {
-//     image: set6[0][0],
-//     title: 'HALLOWEEN',
-//   },
-//   {
-//     image: set7[0],
-//     title: 'PORSCHE SINGER',
-//   },
-//   {
-//     image: set9[0],
-//     title: 'RESTLESS',
-//   },
-//   {
-//     image: set4[0],
-//     title: 'VELAR',
-//   },
-//   {
-//     image: set8[0][0],
-//     title: 'ROVER',
-//   },
-//   {
-//     image: set5[0][0],
-//     title: 'SPACE ROVER',
-//   },
-//   {
-//     image: set10[0][0],
-//     title: 'TOWNCAR',
-//   },
-// ];
-
-// export default MAIN_SET;
