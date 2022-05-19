@@ -24,12 +24,12 @@ export default function reel() {
     <Grid container spacing={0}>
       {reelInfo?.set.main?.map((item, i) => (
         <Grid item xs={12} key={i}>
-          <Image src={item} layout='responsive' priority={i === 0} />
+          <Image src={item} layout='responsive' priority />
         </Grid>
       ))}
       {reelInfo?.set.grey?.map((item, i) => (
         <Grid item xs={12} key={i}>
-          <Image src={item} layout='responsive' priority={i === 0} />
+          <Image src={item} layout='responsive' priority />
         </Grid>
       ))}
       {reelInfo?.set.video && (
