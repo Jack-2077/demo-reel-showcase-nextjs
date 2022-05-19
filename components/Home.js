@@ -2,16 +2,20 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Grid } from '@mui/material';
-import { REEL_IMAGES } from '../assests_imports';
+import { REEL_TITLES, REEL_IMAGES } from '../assests_imports';
 
 const Homepage = () => {
   return (
     <Grid container spacing={0}>
-      {Object.entries(REEL_IMAGES).map((item) => (
-        <Grid item xs={12} key={item[1].title}>
-          <Link href={`/work/${item[1].title}`}>
+      {REEL_TITLES.map((item) => (
+        <Grid item xs={12} key={REEL_IMAGES[item].title}>
+          <Link href={`/work/${REEL_IMAGES[item].title}`}>
             <a>
-              <Image src={item[1].image} layout='responsive' priority />
+              <Image
+                src={REEL_IMAGES[item].image}
+                layout='responsive'
+                priority
+              />
             </a>
           </Link>
         </Grid>

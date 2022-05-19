@@ -295,6 +295,19 @@ export const images_21 = [
   october_images,
 ];
 
+export const REEL_TITLES = [
+  'GASSTATION',
+  '917',
+  'CRITTER',
+  'ATELIER',
+  'HALLOWEEN',
+  'PORSCHESINGER',
+  'RESTLESS',
+  'VELAR',
+  'ROVER',
+  'SPACEROVER',
+  'TOWNCAR',
+];
 export const REEL_IMAGES = {
   GASSTATION: {
     image: pic1,
