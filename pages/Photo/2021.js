@@ -1,8 +1,7 @@
 import React from 'react';
 import { Grid } from '@mui/material';
 import Image from 'next/image';
-
-import { images_20 } from '../Assests_imports';
+import { images_20 } from '../../assests_imports';
 
 export default function Photo2021() {
   return (

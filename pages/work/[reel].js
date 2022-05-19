@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
-import { REEL_IMAGES } from '../Assests_imports';
+import { REEL_IMAGES } from '../../assests_imports';
 import { Grid } from '@mui/material';
 
 export default function reel() {
@@ -34,9 +34,13 @@ export default function reel() {
       ))}
       {reelInfo?.set.video && (
         <Grid item xs={12}>
-          <video autoPlay muted>
-            <source src={reelInfo.set.video} type='video/mp4' />
-          </video>
+          {reelInfo.set.video.slice(-3) === 'gif' ? (
+            <img src={reelInfo.set.video} />
+          ) : (
+            <video autoPlay muted>
+              <source src={reelInfo.set.video} type='video/mp4' />
+            </video>
+          )}
         </Grid>
       )}
     </Grid>
