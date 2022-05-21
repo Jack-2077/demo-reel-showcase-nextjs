@@ -6,9 +6,19 @@ import { REEL_TITLES, REEL_IMAGES } from '../assests_imports';
 
 const Homepage = () => {
   return (
-    <Grid container spacing={0}>
+    <div className='flex-container'>
+      {/* <Grid item xs={12}>
+        <div className='grid'>
+          <figure className='effect-sarah'>
+            <Image src={REEL_IMAGES.GASSTATION.image} layout='responsive' />
+            <figcaption>
+              <h2>GASSTATION</h2>
+            </figcaption>
+          </figure>
+        </div>
+      </Grid> */}
       {REEL_TITLES.map((item) => (
-        <Grid item xs={12} key={REEL_IMAGES[item].title}>
+        <div key={REEL_IMAGES[item].title}>
           <Link href={`/work/${REEL_IMAGES[item].title}`}>
             <a>
               <Image
@@ -18,9 +28,9 @@ const Homepage = () => {
               />
             </a>
           </Link>
-        </Grid>
+        </div>
       ))}
-    </Grid>
+    </div>
   );
 };
 

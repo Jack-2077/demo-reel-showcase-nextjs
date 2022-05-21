@@ -1,19 +1,18 @@
 import React from 'react';
-import { Grid } from '@mui/material';
 import Image from 'next/image';
 
 import { images_21 } from '../../assests_imports';
 
 export default function Photo2022() {
   return (
-    <Grid container spacing={0}>
+    <div className='flex-container'>
       {images_21.map((images) =>
         images.map((image, i) => (
-          <Grid item xs={12} key={i}>
+          <div key={i}>
             <Image src={image} layout='responsive' priority={i < 5} />
-          </Grid>
+          </div>
         ))
       )}
-    </Grid>
+    </div>
   );
 }
