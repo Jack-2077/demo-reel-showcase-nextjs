@@ -87,3 +87,47 @@ h6 {
   display: flex;
   flex-direction: column;
 }
+
+.img__container {
+  position: relative;
+  cursor: pointer;
+}
+
+.img__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+.img__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0;
+}
+.img__background::after {
+  content: '';
+}
+.img__title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: all 0.5s;
+  color: white;
+}
+
+.img__container:hover .img__title {
+  opacity: 1;
+}
+.img__container:hover .img__background {
+  opacity: 0.5;
+}
