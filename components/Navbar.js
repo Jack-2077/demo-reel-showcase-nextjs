@@ -8,13 +8,17 @@ import Link from 'next/link';
 export default function Navbar() {
   return (
     <header className={styles.header}>
-      <Image
-        className={styles.logo}
-        src='/logo.png'
-        alt='Kallikada logo'
-        width={80}
-        height={80}
-      />
+      <div className={styles.logo}>
+        <Image
+          // className={styles.logo}
+          src='/logo.png'
+          alt='Kallikada logo'
+          layout='responsive'
+          width={80}
+          height={80}
+        />
+      </div>
+
       <nav className={styles.navlinks}>
         <ul>
           <li>
