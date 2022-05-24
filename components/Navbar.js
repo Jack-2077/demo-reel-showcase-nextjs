@@ -21,13 +21,14 @@ export default function Navbar() {
             <Link href='/Info'>Info</Link>
           </li>
           <li>
-            <div className={styles.dropdown}>
+            <Link href='/'>Photo</Link>
+            {/* <div className={styles.dropdown}>
               <a className={styles.dropbtn}>Photo</a>
               <div className={styles['dropdown-content']}>
                 <Link href='/Photo/2021'>2021</Link>
                 <Link href='/Photo/2022'>2022</Link>
               </div>
-            </div>
+            </div> */}
           </li>
           {/* <li className={styles.dropdown}>
             <a>Photo</a>
