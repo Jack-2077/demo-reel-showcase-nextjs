@@ -25,26 +25,16 @@ export default function Navbar() {
             <Link href='/Info'>Info</Link>
           </li>
           <li>
-            <Link href='/'>Photo</Link>
-            {/* <div className={styles.dropdown}>
-              <a className={styles.dropbtn}>Photo</a>
+            <div className={styles.dropdown}>
+              <a className={styles.dropbtn}>
+                Photo <i className={styles.arrow}></i>
+              </a>
               <div className={styles['dropdown-content']}>
                 <Link href='/Photo/2021'>2021</Link>
                 <Link href='/Photo/2022'>2022</Link>
               </div>
-            </div> */}
+            </div>
           </li>
-          {/* <li className={styles.dropdown}>
-            <a>Photo</a>
-            <ul className={styles['nav-dropdown']}>
-              <li>
-                <Link href='/Photos/2021'>2021</Link>
-              </li>
-              <li>
-                <Link href='/Photos/2022'>2022</Link>
-              </li>
-            </ul>
-          </li> */}
           <li>
             <Link href='/'>Work</Link>
           </li>

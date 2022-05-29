@@ -26,88 +26,85 @@
   padding: 0px 5vw;
   font-family: 'Helvetica Neue LT W05_65 Medium', sans-serif;
   font-weight: 400;
+  font-stretch: 100%;
   font-style: normal;
   letter-spacing: 0.07777777777777778rem;
   font-size: 1rem;
 }
 
-.navlinks li a {
+.navlinks a {
   transition: all 0.3s ease 0s;
   text-decoration: none;
   color: #ffffff;
-}
-
-/* .dropdown {
-  position: relative;
-  display: inline-block;
   cursor: pointer;
 }
-.nav-dropdown {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  max-width: 80px;
-  min-width: 80px; 
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  padding-left: 2px;
-  padding-right: 2px;
-  padding: 0px 5px; 
-  z-index: 1;
-}
 
-.nav-dropdown li a {
-  color: #663b3b;
-  text-decoration: none;
-  display: block;
+.arrow {
+  transition: all 0.3s ease 0s;
+  border: solid #ffffff;
+  border-width: 0 3px 3px 0;
+  margin-bottom: 2.1px;
+  display: inline-block;
+  padding: 2.5px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
 }
-
-.dropdown:hover .nav-dropdown {
-  display: block;
-} */
 
 .dropbtn {
+  padding: 16px;
+  border: none;
   cursor: pointer;
 }
 
-/* The container <div> - needed to position the dropdown content */
 .dropdown {
   position: relative;
   display: inline-block;
 }
 
-/* Dropdown Content (Hidden by Default) */
 .dropdown-content {
-  right: 0;
   display: none;
   position: absolute;
-  background-color: #000000;
-  min-width: 50px;
+  background-color: #5db0c4;
+  width: 120%;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  text-align: center;
   z-index: 1;
 }
 
-/* Links inside the dropdown */
 .dropdown-content a {
   color: black;
   padding: 12px 16px;
+
+  border-bottom: 2px solid rgb(0, 0, 0);
   text-decoration: none;
   display: block;
 }
 
-/* Change color of dropdown links on hover */
 .dropdown-content a:hover {
-  background-color: #f1f1f1;
+  background-color: #e3e3e3;
 }
 
-/* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
   display: block;
+}
+
+.dropdown:hover .arrow {
+  border-color: #0088a9;
+}
+
+.navlinks li a:hover {
+  color: #0088a9;
 }
 
 @media (max-width: 510px) {
   .header {
     padding-left: 2%;
     padding-right: 0px;
+  }
+
+  .dropdown-content {
+    width: 90%;
+    left: 5px;
   }
   .navlinks {
     flex: 1;
@@ -118,12 +115,13 @@
   }
 
   .navlinks li {
-    padding: 0px 5vw;
+    padding: 0px 3vw;
     color: red;
+    font-size: 0.8rem;
   }
 }
 
-@media (max-width: 300px) {
+@media (max-width: 360px) {
   .logo {
     max-width: 30px;
   }
@@ -131,8 +129,8 @@
   .navlinks li {
     font-size: 0.7rem;
   }
-}
 
-.navlinks li a:hover {
-  color: #0088a9;
+  .arrow {
+    padding: 1px;
+  }
 }

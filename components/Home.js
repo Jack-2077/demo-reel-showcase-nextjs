@@ -12,18 +12,19 @@ const Homepage = () => {
             href={`/work/${REEL_IMAGES[item].title}`}
             key={REEL_IMAGES[item].title}
           >
-            <div className='img__container'>
-              <a>
+            <a>
+              <div className='img__container'>
                 <Image
                   src={REEL_IMAGES[item].image}
                   layout='responsive'
                   priority={i < 3}
                   className='img__img'
                 />
-              </a>
-              <span className='img__background'></span>
-              <span className='img__title'>{REEL_IMAGES[item].title}</span>
-            </div>
+
+                <span className='img__background'></span>
+                <span className='img__title'>{REEL_IMAGES[item].title}</span>
+              </div>
+            </a>
           </Link>
         ))}
       </div>
