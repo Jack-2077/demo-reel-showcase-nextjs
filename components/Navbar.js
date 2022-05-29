@@ -10,7 +10,6 @@ export default function Navbar() {
     <header className={styles.header}>
       <div className={styles.logo}>
         <Image
-          // className={styles.logo}
           src='/logo.png'
           alt='Kallikada logo'
           layout='responsive'

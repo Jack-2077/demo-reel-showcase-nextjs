@@ -3,9 +3,19 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { REEL_TITLES, REEL_IMAGES } from '../assests_imports';
 
+import styles from '../styles/Home.module.css';
+
 const Homepage = () => {
   return (
     <>
+      <Image
+        className='test1'
+        src='/assests/Videos/GIF03.gif'
+        layout='responsive'
+        width={1280}
+        height={544}
+        priority
+      />
       <div className='flex-container'>
         {REEL_TITLES.map((item, i) => (
           <Link
@@ -13,16 +23,18 @@ const Homepage = () => {
             key={REEL_IMAGES[item].title}
           >
             <a>
-              <div className='img__container'>
+              <div className={styles['img-container']}>
                 <Image
                   src={REEL_IMAGES[item].image}
                   layout='responsive'
                   priority={i < 3}
-                  className='img__img'
+                  className={styles['img-img']}
                 />
 
-                <span className='img__background'></span>
-                <span className='img__title'>{REEL_IMAGES[item].title}</span>
+                <span className={styles['img-background']}></span>
+                <span className={styles['img-title']}>
+                  {REEL_IMAGES[item].title}
+                </span>
               </div>
             </a>
           </Link>

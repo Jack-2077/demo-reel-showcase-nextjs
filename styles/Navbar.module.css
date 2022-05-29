@@ -116,7 +116,6 @@
 
   .navlinks li {
     padding: 0px 3vw;
-    color: red;
     font-size: 0.8rem;
   }
 }
@@ -128,6 +127,7 @@
 
   .navlinks li {
     font-size: 0.7rem;
+    padding: 0px 1px;
   }
 
   .arrow {

@@ -1,0 +1,45 @@
+.img-container {
+  position: relative;
+  cursor: pointer;
+}
+
+.img-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+.img-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0;
+  transition: 0.4s;
+}
+.img-background::after {
+  content: '';
+}
+.img-title {
+  font-size: 5vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: all 0.3s;
+  color: white;
+}
+
+.img-container:hover .img-title {
+  opacity: 1;
+}
+.img-container:hover .img-background {
+  opacity: 0.5;
+}

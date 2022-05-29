@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
 import { REEL_IMAGES } from '../../assests_imports';
-import { Grid, Box } from '@mui/material';
 
 export default function reel() {
   const [reelInfo, setReelInfo] = useState();
