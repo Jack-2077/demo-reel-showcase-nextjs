@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import styles from '../styles/Navbar.module.css';
 
@@ -6,8 +6,28 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Navbar() {
+  const [show, setShow] = useState(false);
+
+  useEffect(() => {
+    console.log(window.location.pathname);
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 250) {
+        setShow(true);
+      } else setShow(false);
+    });
+    return () => {
+      window.removeEventListener('scroll', null);
+    };
+  }, []);
+
   return (
-    <header className={styles.header}>
+    <header
+      className={
+        !show
+          ? `${styles.header} ${styles.removeBackgroundColor}`
+          : styles.header
+      }
+    >
       <div className={styles.logo}>
         <Image
           src='/logo.png'
