@@ -19,6 +19,8 @@ html,
 body {
   height: 100%;
   background-color: black;
+  font-family: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system,
+    system-ui, sans-serif;
 }
 /*
   Typographic tweaks!
@@ -83,6 +85,14 @@ h6 {
   position: unset !important;
 }
 
+svg {
+  transition: fill 200ms;
+  color: rgb(234, 234, 234);
+}
+
+a {
+  cursor: pointer;
+}
 .flex-container {
   display: flex;
   flex-direction: column;

@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { REEL_TITLES, REEL_IMAGES } from '../assests_imports';
 
 import styles from '../styles/Home.module.css';
+import Info from './Info';
 
 const Homepage = () => {
   return (
@@ -40,6 +41,7 @@ const Homepage = () => {
           </Link>
         ))}
       </div>
+      <Info />
     </>
   );
 };

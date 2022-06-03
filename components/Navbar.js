@@ -9,7 +9,6 @@ export default function Navbar() {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
-    console.log(window.location.pathname);
     window.addEventListener('scroll', () => {
       if (window.scrollY > 250) {
         setShow(true);
