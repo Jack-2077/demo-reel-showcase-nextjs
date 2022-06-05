@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 .logo {
   cursor: pointer;
   width: 100%;
@@ -35,11 +37,11 @@
 .navlinks li {
   display: inline-block;
   padding: 0px 5vw;
-  font-family: 'Helvetica Neue LT W05_65 Medium', sans-serif;
+  letter-spacing: 0.08rem;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.02rem;
   font-weight: 400;
   font-style: normal;
-  letter-spacing: 0.07777777777777778rem;
-  font-size: 1rem;
 }
 
 .navlinks a {

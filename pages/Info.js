@@ -58,5 +58,3 @@ function Info() {
 }
 
 export default Info;
-
-//1070.400 x 245.900

@@ -23,7 +23,8 @@
   content: '';
 }
 .img-title {
-  font-size: 5vw;
+  font-family: 'Quantico', sans-serif;
+  font-size: 2.5em;
   position: absolute;
   top: 0;
   left: 0;
