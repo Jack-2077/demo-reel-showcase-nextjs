@@ -19,6 +19,10 @@ export default function Navbar() {
     };
   }, []);
 
+  // const scrollToElement = async () => {
+  //   document.getElementById('LUFFY').scrollIntoView();
+  // };
+
   return (
     <header
       className={
@@ -28,13 +32,17 @@ export default function Navbar() {
       }
     >
       <div className={styles.logo}>
-        <Image
-          src='/logo.png'
-          alt='Kallikada logo'
-          layout='responsive'
-          width={80}
-          height={80}
-        />
+        <Link href='/'>
+          <a>
+            <Image
+              src='/logo.png'
+              alt='Kallikada logo'
+              layout='responsive'
+              width={80}
+              height={80}
+            />
+          </a>
+        </Link>
       </div>
 
       <nav className={styles.navlinks}>

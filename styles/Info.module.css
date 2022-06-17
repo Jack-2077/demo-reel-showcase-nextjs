@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;700&display=swap');
 
+.info-section {
+  position: fixed;
+  margin-top: 6em;
+}
 .info-container {
   display: flex;
   flex-direction: column;
@@ -64,7 +68,14 @@
   font-size: 1.2em;
 }
 
-@media (max-width: 300px) {
+@media (max-width: 500px) {
+  .info-container {
+    padding: 1em;
+  }
+  .info-title {
+    font-size: 1.8em;
+    letter-spacing: 0px;
+  }
   .circular_image {
     width: 10em;
     height: 10em;

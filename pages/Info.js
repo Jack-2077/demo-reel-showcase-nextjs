@@ -9,7 +9,7 @@ import React from 'react';
 import styles from '../styles/Info.module.css';
 function Info() {
   return (
-    <>
+    <section className={styles['info-section']}>
       <h3 className={styles['info-title']}>Akshay Kallikada</h3>
       <div className={styles['info-container']}>
         <div>
@@ -53,7 +53,7 @@ function Info() {
           and CG model supervisor.
         </div>
       </div>
-    </>
+    </section>
   );
 }
 

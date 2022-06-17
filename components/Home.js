@@ -2,7 +2,6 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { REEL_TITLES, REEL_IMAGES } from '../assests_imports';
-import Info from '../pages/Info';
 
 import styles from '../styles/Home.module.css';
 
@@ -41,7 +40,6 @@ const Homepage = () => {
           );
         })}
       </div>
-      <Info />
     </>
   );
 };
