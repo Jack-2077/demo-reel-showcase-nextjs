@@ -49,30 +49,5 @@ export default function reel() {
         </div>
       )}
     </div>
-
-    // <Grid container spacing={0}>
-    //   {reelInfo?.set.main?.map((item, i) => (
-    //     <Grid item xs={12} key={i}>
-    //       <Image src={item} layout='responsive' priority />
-    //     </Grid>
-    //   ))}
-    //   {reelInfo?.set.grey?.map((item, i) => (
-    //     <Grid item xs={12} key={i}>
-    //       <Image src={item} layout='responsive' priority />
-    //     </Grid>
-    //   ))}
-
-    //   {reelInfo?.set.video && (
-    //     <Grid item xs={12}>
-    //       {reelInfo.set.video.slice(-3) === 'gif' ? (
-    //         <img src={reelInfo.set.video} />
-    //       ) : (
-    //         <video autoPlay muted>
-    //           <source src={reelInfo.set.video} type='video/mp4' />
-    //         </video>
-    //       )}
-    //     </Grid>
-    //   )}
-    // </Grid>
   );
 }

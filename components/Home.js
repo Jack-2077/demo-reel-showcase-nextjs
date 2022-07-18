@@ -9,7 +9,6 @@ const Homepage = () => {
   return (
     <>
       <Image
-        className='test1'
         src='/assests/Videos/GIF03.gif'
         layout='responsive'
         width={1280}
@@ -22,7 +21,7 @@ const Homepage = () => {
           const image = REEL_IMAGES[item].image;
 
           return (
-            <Link href={`/work/${imageTitle}`} key={imageTitle}>
+            <Link href={`/Work/${imageTitle}`} key={imageTitle}>
               <a>
                 <div className={styles['img-container']}>
                   <Image
@@ -31,7 +30,6 @@ const Homepage = () => {
                     priority={i < 2}
                     className={styles['img-img']}
                   />
-
                   <span className={styles['img-background']}></span>
                   <span className={styles['img-title']}>{imageTitle}</span>
                 </div>

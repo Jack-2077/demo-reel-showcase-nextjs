@@ -17,9 +17,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding: 0px;
-  padding-left: 2%;
-  padding-right: 3%;
+  padding: 0 3% 0 2%;
   background-color: black;
 
   transition-timing-function: ease-in;
@@ -111,7 +109,7 @@
 @media (max-width: 510px) {
   .header {
     padding-left: 2%;
-    padding-right: 0px;
+    padding-right: 0;
   }
 
   .dropdown-content {
@@ -127,7 +125,7 @@
   }
 
   .navlinks li {
-    padding: 0px 3vw;
+    padding: 0 3vw;
     font-size: 0.8rem;
   }
 }

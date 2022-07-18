@@ -19,10 +19,6 @@ export default function Navbar() {
     };
   }, []);
 
-  // const scrollToElement = async () => {
-  //   document.getElementById('LUFFY').scrollIntoView();
-  // };
-
   return (
     <header
       className={
