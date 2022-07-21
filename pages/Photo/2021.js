@@ -8,7 +8,12 @@ export default function Photo2021() {
       {images_20.map((images) =>
         images.map((image, i) => (
           <div key={i}>
-            <Image src={image} layout='responsive' priority={i < 5} />
+            <Image
+              src={image}
+              layout='responsive'
+              priority={i < 5}
+              alt='photographic image'
+            />
           </div>
         ))
       )}

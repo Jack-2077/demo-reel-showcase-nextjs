@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import Image from 'next/image';
 import { REEL_IMAGES } from '../../assests_imports';
 
-export default function reel() {
+export default function Reel() {
   const [reelInfo, setReelInfo] = useState();
 
   const router = useRouter();
@@ -17,18 +17,28 @@ export default function reel() {
 
       setReelInfo(demoReel);
     }
-  }, [router.isReady]);
+  }, [router.isReady, router.query]);
 
   return (
     <div className='flex-container'>
       {reelInfo?.set.main?.map((item, i) => (
         <div key={i}>
-          <Image src={item} layout='responsive' priority={i < 2} />
+          <Image
+            src={item}
+            layout='responsive'
+            priority={i < 2}
+            alt={reelInfo.title}
+          />
         </div>
       ))}
       {reelInfo?.set.grey?.map((item, i) => (
         <div key={i}>
-          <Image src={item} layout='responsive' priority={i < 2} />
+          <Image
+            src={item}
+            layout='responsive'
+            priority={i < 2}
+            alt={reelInfo.title}
+          />
         </div>
       ))}
       {reelInfo?.set.video && (
@@ -40,6 +50,7 @@ export default function reel() {
               width={1920}
               height={1080}
               priority
+              alt={reelInfo.title}
             />
           ) : (
             <video autoPlay muted>

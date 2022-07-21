@@ -9,7 +9,12 @@ export default function Photo2022() {
       {images_21.map((images) =>
         images.map((image, i) => (
           <div key={i}>
-            <Image src={image} layout='responsive' priority={i < 5} />
+            <Image
+              src={image}
+              layout='responsive'
+              priority={i < 5}
+              alt='photographic image'
+            />
           </div>
         ))
       )}

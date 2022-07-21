@@ -14,6 +14,7 @@ const Homepage = () => {
         width={1280}
         height={544}
         priority
+        alt='series of rendered images from Akshay'
       />
       <div className='flex-container'>
         {REEL_TITLES.map((item, i) => {
@@ -29,6 +30,7 @@ const Homepage = () => {
                     layout='responsive'
                     priority={i < 2}
                     className={styles['img-img']}
+                    alt={imageTitle}
                   />
                   <span className={styles['img-background']}></span>
                   <span className={styles['img-title']}>{imageTitle}</span>

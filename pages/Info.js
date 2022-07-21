@@ -4,6 +4,7 @@ import {
   Instagram,
   Behance,
 } from '@icons-pack/react-simple-icons';
+import Image from 'next/image';
 
 import React from 'react';
 import styles from '../styles/Info.module.css';
@@ -14,7 +15,7 @@ function Info() {
       <div className={styles['info-container']}>
         <div>
           <div className={styles['circular_image']}>
-            <img src='/profile.jpg' />
+            <Image src='/profile.jpg' alt='photo of Akshay Kallikada' />
           </div>
           <div className={styles['socials-container']}>
             <a target='_blank'>
@@ -25,6 +26,7 @@ function Info() {
             <a
               href='https://www.linkedin.com/in/akshaykalllikadavenugopal/'
               target='_blank'
+              rel='noreferrer'
             >
               <span>
                 <Linkedin className={styles['socials-linkedin']} />
@@ -33,12 +35,17 @@ function Info() {
             <a
               href='https://www.instagram.com/_akshaykalllikada_/'
               target='_blank'
+              rel='noreferrer'
             >
               <span>
                 <Instagram className={styles['socials-instagram']} />
               </span>
             </a>
-            <a href='https://www.behance.net/AkshayVenugopal' target='_blank'>
+            <a
+              href='https://www.behance.net/AkshayVenugopal'
+              target='_blank'
+              rel='noreferrer'
+            >
               <span>
                 <Behance className={styles['socials-behance']} />
               </span>
