@@ -183,6 +183,18 @@ import Z19 from './public/assests/Photos/2021/OCTOBER_VICKY_STANLEY/OCT_028.jpg'
 import Z20 from './public/assests/Photos/2021/OCTOBER_VICKY_STANLEY/OCT_042.jpg';
 import Z21 from './public/assests/Photos/2021/OCTOBER_VICKY_STANLEY/OCT_0256.jpg';
 
+const night_images1 = [
+  'NIGHT/NIGHT_01.jpg',
+  'NIGHT/NIGHT_02.jpg',
+  'NIGHT/NIGHT_03.jpg',
+  'NIGHT/NIGHT_04.jpg',
+  'NIGHT/NIGHT_05.jpg',
+  'NIGHT/NIGHT_06.jpg',
+  'NIGHT/NIGHT_07.jpg',
+  'NIGHT/NIGHT_08.jpg',
+  'NIGHT/NIGHT_09.jpg',
+  'NIGHT/NIGHT_10.jpg',
+];
 const night_images = [N1, N2, N3, N4, N5, N6, N7, N8, N9, N10];
 const vancity_images = [
   V1,

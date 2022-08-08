@@ -15,7 +15,12 @@ function Info() {
       <div className={styles['info-container']}>
         <div>
           <div className={styles['circular_image']}>
-            <Image src='/profile.jpg' alt='photo of Akshay Kallikada' />
+            <Image
+              src='/profile.jpg'
+              alt='photo of Akshay Kallikada'
+              height={250}
+              width={250}
+            />
           </div>
           <div className={styles['socials-container']}>
             <a target='_blank'>

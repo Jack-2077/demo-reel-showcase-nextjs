@@ -1,64 +1,138 @@
-import React, { useEffect, useState } from 'react';
-import { useRouter } from 'next/router';
+import React from 'react';
 import Image from 'next/image';
-import { REEL_IMAGES } from '../../assests_imports';
 
-export default function Reel() {
-  const [reelInfo, setReelInfo] = useState();
+import styles from '../../styles/Home.module.css';
 
-  const router = useRouter();
+export async function getStaticPaths() {
+  const resp = await fetch(
+    'https://d3mn3tcv16754k.cloudfront.net/homepage_reels.json'
+  );
+  const reels = await resp.json();
 
-  useEffect(() => {
-    if (router.isReady) {
-      const { reel } = router.query;
+  return {
+    paths: reels.map((item) => ({
+      params: { reel: item.title.toString() },
+    })),
+    fallback: false,
+  };
+}
 
-      const reelName = reel.replaceAll(' ', '');
-      const demoReel = REEL_IMAGES[reelName];
+export async function getStaticProps({ params }) {
+  const resp = await fetch(
+    `https://d3mn3tcv16754k.cloudfront.net/reel/${params.reel}.json`
+  );
 
-      setReelInfo(demoReel);
-    }
-  }, [router.isReady, router.query]);
+  return {
+    props: {
+      reel: await resp.json(),
+    },
+  };
+}
 
+export default function Reel({ reel }) {
+  console.log(reel);
   return (
     <div className='flex-container'>
-      {reelInfo?.set.main?.map((item, i) => (
-        <div key={i}>
+      {/* {reel.main.map((item, i) => (
+        <div key={`${item.title}-main-${i}`}>
           <Image
-            src={item}
-            layout='responsive'
+            src={`https://d3mn3tcv16754k.cloudfront.net/PROJECTS/${reel.name}/${item}`}
+            alt={item.title}
+            className={styles['image-img']}
+            layout='fill'
             priority={i < 2}
-            alt={reelInfo.title}
           />
         </div>
       ))}
-      {reelInfo?.set.grey?.map((item, i) => (
-        <div key={i}>
+      {reel.grey?.map((item, i) => (
+        <div key={`${item.title}-grey-${i}`}>
           <Image
-            src={item}
-            layout='responsive'
+            src={`https://d3mn3tcv16754k.cloudfront.net/PROJECTS/${reel.name}/${item}`}
+            alt={item.title}
+            className={styles['image-img']}
+            layout='fill'
             priority={i < 2}
-            alt={reelInfo.title}
           />
         </div>
-      ))}
-      {reelInfo?.set.video && (
+      ))} */}
+      {/* {reel.video && (
         <div>
-          {reelInfo.set.video.slice(-3) === 'gif' ? (
+          {reel.video.slice(-3) === 'gif' ? (
             <Image
-              src={reelInfo.set.video}
+              src={`https://d3mn3tcv16754k.cloudfront.net/PROJECTS/${reel.name}/${reel.video}`}
               layout='responsive'
               width={1920}
               height={1080}
               priority
-              alt={reelInfo.title}
+              alt={reel.title}
             />
           ) : (
             <video autoPlay muted>
-              <source src={reelInfo.set.video} type='video/mp4' />
+              <source
+                src={`https://d3mn3tcv16754k.cloudfront.net/PROJECTS/${reel.name}/${reel.video}`}
+                type='video/mp4'
+              />
             </video>
           )}
         </div>
-      )}
+      )} */}
     </div>
   );
+  // const [reelInfo, setReelInfo] = useState();
+
+  // const router = useRouter();
+
+  // useEffect(() => {
+  //   if (router.isReady) {
+  //     const { reel } = router.query;
+
+  //     const reelName = reel.replaceAll(' ', '');
+  //     const demoReel = REEL_IMAGES[reelName];
+
+  //     setReelInfo(demoReel);
+  //   }
+  // }, [router.isReady, router.query]);
+
+  // return (
+  //   <div className='flex-container'>
+  //     {reelInfo?.set.main?.map((item, i) => (
+  //       <div key={i}>
+  //         <Image
+  //           src={item}
+  //           layout='responsive'
+  //           priority={i < 2}
+  //           alt={reelInfo.title}
+  //         />
+  //       </div>
+  //     ))}
+  //     {reelInfo?.set.grey?.map((item, i) => (
+  //       <div key={i}>
+  //         <Image
+  //           src={item}
+  //           layout='responsive'
+  //           priority={i < 2}
+  //           alt={reelInfo.title}
+  //         />
+  //       </div>
+  //     ))}
+  //     {reelInfo?.set.video && (
+  //       <div>
+  //         {reelInfo.set.video.slice(-3) === 'gif' ? (
+  //           <Image
+  //             src={reelInfo.set.video}
+  //             layout='responsive'
+  //             width={1920}
+  //             height={1080}
+  //             priority
+  //             alt={reelInfo.title}
+  //           />
+  //         ) : (
+  //           <video autoPlay muted>
+  //             <source src={reelInfo.set.video} type='video/mp4' />
+  //           </video>
+  //         )}
+  //       </div>
+  //     )}
+  //   </div>
+  // );
 }

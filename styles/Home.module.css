@@ -1,15 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
 
-.img-container {
+.image-container {
   position: relative;
-  cursor: pointer;
 }
 
-.img-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  object-fit: cover;
+.image-container > span:first-child {
+  position: unset !important;
+  height: 100%;
+}
+
+.image-img {
+  object-fit: contain;
+  width: 100% !important;
+  position: relative !important;
+  height: unset !important;
 }
 
 .img-background,
@@ -40,10 +44,10 @@
   transition: all 0.3s;
 }
 
-.img-container:hover .img-title {
+.image-container:hover .img-title {
   opacity: 1;
 }
-.img-container:hover .img-background {
+.image-container:hover .img-background {
   opacity: 0.5;
 }
 
