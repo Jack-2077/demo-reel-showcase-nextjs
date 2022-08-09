@@ -49,6 +49,43 @@
 
 // /*                         2020 IMAGES                                         */
 
+// {
+//   "NIGHT": ["NIGHT_01.jpg",
+//   "NIGHT_02.jpg",
+//   "NIGHT_03.jpg",
+//   "NIGHT_04.jpg",
+//   "NIGHT_05.jpg",
+//   "NIGHT_06.jpg",
+//   "NIGHT_07.jpg",
+//   "NIGHT_08.jpg",
+//   "NIGHT_09.jpg",
+//     "NIGHT_10.jpg" ],
+
+//     "VANCITY": [
+//       "VANCITY_01.jpg",
+// "VANCITY_02.jpg",
+// "VANCITY_03.jpg",
+// "VANCITY_04.jpg",
+// "VANCITY_05.jpg",
+// "VANCITY_06.jpg",
+// "VANCITY_07.jpg",
+// "VANCITY_08.jpg",
+// "VANCITY_09.jpg",
+// "VANCITY_10.jpg",
+// "VANCITY_11.jpg",
+// "VANCITY_12.jpg",
+// "VANCITY_13.jpg",
+// "VANCITY_14.jpg",
+// "VANCITY_15.jpg",
+// "VANCITY_16.jpg",
+// "VANCITY_17.jpg",
+// "VANCITY_18.jpg",
+// "VANCITY_19.jpg",
+// "VANCITY_20.jpg"
+//     ]
+
+// }
+
 // //NIGHT
 // import N1 from './public/assests/Photos/2020/NIGHT/NIGHT_01.jpg';
 // import N2 from './public/assests/Photos/2020/NIGHT/NIGHT_02.jpg';
@@ -83,7 +120,7 @@
 // import V19 from './public/assests/Photos/2020/VANCITY/VANCITY_19.jpg';
 // import V20 from './public/assests/Photos/2020/VANCITY/VANCITY_20.jpg';
 
-// //YWN
+//YWN
 // import Y1 from './public/assests/Photos/2020/YWN/YWN_01.jpg';
 // import Y2 from './public/assests/Photos/2020/YWN/YWN_02.jpg';
 // import Y3 from './public/assests/Photos/2020/YWN/YWN_03.jpg';

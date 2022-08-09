@@ -1,23 +1,37 @@
 import React from 'react';
 import Image from 'next/image';
 
-import { images_21 } from '../../assests_imports';
+export async function getStaticProps() {
+  const resp = await fetch(
+    'https://d3mn3tcv16754k.cloudfront.net/2022-images.json'
+  );
 
-export default function Photo2022() {
+  const res = await resp.json();
+  const keys = Object.keys(res);
+  const images = [];
+  keys.forEach((item) => {
+    res[item].forEach((image) => {
+      images.push(`${item}/${image}`);
+    });
+  });
+  return {
+    props: {
+      images,
+    },
+  };
+}
+
+export default function Photo2022({ images }) {
   return (
     <div className='flex-container'>
-      {images_21.map((images) =>
-        images.map((image, i) => (
-          <div key={i}>
-            <Image
-              src={image}
-              layout='responsive'
-              priority={i < 5}
-              alt='photographic image'
-            />
-          </div>
-        ))
-      )}
+      {images.map((image) => (
+        <div>
+          <Image
+            src={`https://d3mn3tcv16754k.cloudfront.net/Photos/2021/${image}`}
+            layout='fill'
+          />
+        </div>
+      ))}
     </div>
   );
 }
