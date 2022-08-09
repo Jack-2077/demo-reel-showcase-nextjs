@@ -19,7 +19,7 @@ const Home = ({ reel_images }) => {
   return (
     <>
       <Image
-        src='/assests/intro-video.gif'
+        src='https://d3mn3tcv16754k.cloudfront.net/intro-video.gif'
         layout='responsive'
         width={1280}
         height={544}
