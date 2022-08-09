@@ -29,6 +29,7 @@ export default function Photo2022({ images }) {
           <Image
             src={`https://d3mn3tcv16754k.cloudfront.net/Photos/2021/${image}`}
             layout='fill'
+            alt='Picture shot by Akshay Kalllikada'
           />
         </div>
       ))}

@@ -19,7 +19,7 @@ const Home = ({ reel_images }) => {
   return (
     <>
       <Image
-        src='/assests/Videos/GIF03.gif'
+        src='/assests/intro-video.gif'
         layout='responsive'
         width={1280}
         height={544}
