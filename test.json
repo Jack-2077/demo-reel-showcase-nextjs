@@ -25,5 +25,46 @@
   }
 
   {
-    
+    "title": "CRITTER",
+    "name": "11.CRITTER",
+    "main": ["01_001.JPG"],
+    "grey": ["02_085.jpg"],
+    "video": "CRITTER01.mp4"
+  }
+
+  {
+    "title": "ATELIER",
+    "name": "02.ATELIER",
+    "main": ["ATLR01.jpg"],
+    "grey": ["ATLR02.jpg"],
+    "video": "ATLR01.mp4"
+  }
+
+  {
+    "title": "HALLOWEEN",
+    "name": "06.HALLOWEEN",
+    "main": ["Vfx02_AkshayVenugopal_HalloweenContest_02_Colour.jpg", "Vfx02_AkshayVenugopal_HalloweenContest_02_DAY.jpg"],
+    "video": "HALOWEEN01.mp4"
+  }
+
+  ////////////////
+  {
+    "title": "PORSCHE_SINGER",
+    "name": "07.PORSCHE_SINGER",
+    "main": [],
+    "video": "04.gif"
+  }
+
+  {
+    "title": "",
+    "name": "",
+    "main": [],
+    "video": ""
+  }
+
+  {
+    "title": "",
+    "name": "",
+    "main": [],
+    "video": ""
   }

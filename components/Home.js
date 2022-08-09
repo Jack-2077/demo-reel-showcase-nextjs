@@ -20,44 +20,6 @@ const night_images = [
   'NIGHT/NIGHT_10.jpg',
 ];
 
-export function getStaticProps() {
-  const home_images = [
-    { name: '01.GASSTATION/06.jpg', title: 'GASSTATION' },
-    { name: '03.917/917_01.jpg', title: '917' },
-    { name: '11.CRITTER/01_001.JPG', title: 'CRITTER' },
-    { name: '02.ATELIER/ATLR01.jpg', title: 'ATELIER' },
-    {
-      name: '06.HALLOWEEN/Vfx02_AkshayVenugopal_HalloweenContest_02_Colour.jpg',
-      title: 'HALLOWEEN',
-    },
-    { name: '07.PORSCHE_SINGER/04.jpg', title: 'PORSCHESINGER' },
-    {
-      name: '09.RESTLESS/Vfx02AkshayVenugopal_VFXPreProdFinalModel_Class08.v001-01.jpg',
-      title: 'RESTLESS',
-    },
-    { name: '04.VELAR/VLR_01.jpg', title: 'VELAR' },
-    { name: '08.ECDYSIS721/fs_frontquarter.jpg', title: 'ROVER' },
-    { name: '05.ROVER/SPACEROVER_03.jpg', title: 'SPACEROVER' },
-    { name: '10.TOWNCAR/CAM_02.jpg', title: 'TOWNCAR' },
-  ];
-  const reel_images = [];
-  home_images.map((item, i) => {
-    const newReelObject = {
-      source: `https://d3mn3tcv16754k.cloudfront.net/PROJECTS/${item.name}`,
-      title: item.title,
-    };
-    reel_images.push(newReelObject);
-  });
-
-  console.log(reel_images);
-
-  return {
-    props: {
-      images: 'hey',
-    },
-  };
-}
-
 const Homepage = ({ images }) => {
   console.log(images);
   return (

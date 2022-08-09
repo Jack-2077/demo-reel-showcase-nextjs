@@ -5,7 +5,7 @@ import styles from '../styles/Home.module.css';
 
 export async function getStaticProps() {
   const resp = await fetch(
-    'https://d3mn3tcv16754k.cloudfront.net/homepage_reels.json'
+    'https://d3mn3tcv16754k.cloudfront.net/demo_reels.json'
   );
 
   return {
@@ -16,7 +16,6 @@ export async function getStaticProps() {
 }
 
 const Home = ({ reel_images }) => {
-  console.log(reel_images);
   return (
     <>
       <Image
@@ -31,7 +30,7 @@ const Home = ({ reel_images }) => {
 
       <div className='flex-container'>
         {reel_images.map((item, i) => (
-          <Link href={`/Work/${item.title}`}>
+          <Link href={`/Work/${item.title}`} key={item.id}>
             <a>
               <div className={styles['image-container']} key={item.id}>
                 <Image
@@ -42,7 +41,9 @@ const Home = ({ reel_images }) => {
                   priority={i < 2}
                 />
                 <span className={styles['img-background']}></span>
-                <span className={styles['img-title']}>{item.title}</span>
+                <span className={styles['img-title']}>
+                  {item.title.replace('-', ' ')}
+                </span>
               </div>
             </a>
           </Link>

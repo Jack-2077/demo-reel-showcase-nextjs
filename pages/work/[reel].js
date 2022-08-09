@@ -1,11 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
 
-import styles from '../../styles/Home.module.css';
-
 export async function getStaticPaths() {
   const resp = await fetch(
-    'https://d3mn3tcv16754k.cloudfront.net/homepage_reels.json'
+    'https://d3mn3tcv16754k.cloudfront.net/demo_reels.json'
   );
   const reels = await resp.json();
 
@@ -19,7 +17,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const resp = await fetch(
-    `https://d3mn3tcv16754k.cloudfront.net/reel/${params.reel}.json`
+    `https://d3mn3tcv16754k.cloudfront.net/REELS/${params.reel}.json`
   );
 
   return {
@@ -30,32 +28,19 @@ export async function getStaticProps({ params }) {
 }
 
 export default function Reel({ reel }) {
-  console.log(reel);
   return (
     <div className='flex-container'>
-      {/* {reel.main.map((item, i) => (
+      {reel.main.map((item, i) => (
         <div key={`${item.title}-main-${i}`}>
           <Image
             src={`https://d3mn3tcv16754k.cloudfront.net/PROJECTS/${reel.name}/${item}`}
             alt={item.title}
-            className={styles['image-img']}
             layout='fill'
             priority={i < 2}
           />
         </div>
       ))}
-      {reel.grey?.map((item, i) => (
-        <div key={`${item.title}-grey-${i}`}>
-          <Image
-            src={`https://d3mn3tcv16754k.cloudfront.net/PROJECTS/${reel.name}/${item}`}
-            alt={item.title}
-            className={styles['image-img']}
-            layout='fill'
-            priority={i < 2}
-          />
-        </div>
-      ))} */}
-      {/* {reel.video && (
+      {reel.video && (
         <div>
           {reel.video.slice(-3) === 'gif' ? (
             <Image
@@ -75,9 +60,10 @@ export default function Reel({ reel }) {
             </video>
           )}
         </div>
-      )} */}
+      )}
     </div>
   );
+
   // const [reelInfo, setReelInfo] = useState();
 
   // const router = useRouter();
