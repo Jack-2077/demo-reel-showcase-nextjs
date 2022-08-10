@@ -18,6 +18,7 @@ function Info() {
             <Image
               src='/profile.jpg'
               alt='photo of Akshay Kallikada'
+              priority
               height={250}
               width={250}
             />
