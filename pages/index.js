@@ -30,7 +30,7 @@ const Home = ({ reel_images }) => {
 
       <div className='flex-container'>
         {reel_images.map((item, i) => (
-          <Link href={`/Work/${item.title}`} key={item.id}>
+          <Link href={`/work/${item.title}`} key={item.id}>
             <a>
               <div className={styles['image-container']} key={item.id}>
                 <Image
