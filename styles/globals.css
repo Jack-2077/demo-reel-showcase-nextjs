@@ -80,3 +80,20 @@ a {
   display: flex;
   flex-direction: column;
 }
+
+.flex-container .image-container {
+  position: relative;
+  height: 100%;
+}
+
+.flex-container .image-container > span {
+  position: unset !important;
+  height: 100%;
+}
+
+.image-container .image-img {
+  object-fit: contain;
+  width: 100% !important;
+  position: relative !important;
+  height: unset !important;
+}
