@@ -18,64 +18,42 @@ export async function getStaticProps() {
 const Home = ({ reel_images }) => {
   return (
     <>
-      <Image
-        src='/assests/intro-video.gif'
-        layout='responsive'
-        width={1280}
-        height={544}
-        quality={100}
-        priority
-        alt='series of rendered images'
-      />
-
-      <div className='flex-container'>
-        {reel_images.map((item, i) => (
-          <Link href={`/work/${item.title}`} key={item.id}>
-            <a>
-              <div className={styles['image-container']} key={item.id}>
-                <Image
-                  src={`https://d3mn3tcv16754k.cloudfront.net/PROJECTS/${item.name}`}
-                  alt={item.title}
-                  className={styles['image-img']}
-                  layout='fill'
-                  priority={i < 2}
-                />
-                <span className={styles['img-background']}></span>
-                <span className={styles['img-title']}>
-                  {item.title.replace('-', ' ')}
-                </span>
-              </div>
-            </a>
-          </Link>
-        ))}
-      </div>
-    </>
-  );
-};
-
-{
-  /* {REEL_TITLES.map((item, i) => {
-          const imageTitle = REEL_IMAGES[item].title;
-          const image = REEL_IMAGES[item].image;
-
-          return (
-            <Link href={`/Work/${imageTitle}`} key={imageTitle}>
-              <a>
-                <div className={styles['img-container']}>
+      <section>
+        <Image
+          src='/assests/intro-video.gif'
+          layout='responsive'
+          width={1280}
+          height={544}
+          quality={100}
+          priority
+          alt='series of rendered images from Akshay Kalllikada'
+        />
+      </section>
+      <section>
+        <div className='flex-container'>
+          {reel_images.map((item, i) => (
+            <Link href={`/work/${item.title}`} key={item.id}>
+              <a title={item.title}>
+                <div className={styles['image-container']} key={item.id}>
                   <Image
-                    src={image}
-                    layout='responsive'
+                    src={`https://d3mn3tcv16754k.cloudfront.net/PROJECTS/${item.name}`}
+                    alt={item.title}
+                    className={styles['image-img']}
+                    layout='fill'
                     priority={i < 2}
-                    className={styles['img-img']}
-                    alt={imageTitle}
                   />
                   <span className={styles['img-background']}></span>
-                  <span className={styles['img-title']}>{imageTitle}</span>
+                  <span className={styles['img-title']}>
+                    {item.title.replace('-', ' ')}
+                  </span>
                 </div>
               </a>
             </Link>
-          );
-        })} */
-}
+          ))}
+        </div>
+      </section>
+    </>
+  );
+};
 
 export default Home;

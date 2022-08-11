@@ -20,20 +20,15 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header
-      className={
-        !show
-          ? `${styles.header} ${styles.removeBackgroundColor}`
-          : styles.header
-      }
-    >
+    <header className={`${styles.header} ${!show ? styles.removeBgColor : ''}`}>
       <div className={styles.logo}>
         <Link href='/'>
-          <a>
+          <a title='Akshay Kalllikada'>
             <Image
               src='/logo.png'
-              alt='Kallikada logo'
+              alt='logo'
               layout='responsive'
+              priority
               width={80}
               height={80}
             />
