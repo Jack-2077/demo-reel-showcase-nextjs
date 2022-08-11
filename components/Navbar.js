@@ -25,7 +25,7 @@ export default function Navbar() {
         <Link href='/'>
           <a title='Akshay Kalllikada'>
             <Image
-              src='/logo.png'
+              src='/op-logo.png'
               alt='logo'
               layout='responsive'
               priority

@@ -11,13 +11,13 @@ import styles from '../styles/Info.module.css';
 function Info() {
   return (
     <section className={styles['info-section']}>
-      <h3 className={styles['info-title']}>Akshay Kallikada</h3>
+      <h3 className={styles['info-title']}>zoro</h3>
       <div className={styles['info-container']}>
         <div>
           <div className={styles['circular_image']}>
             <Image
-              src='/profile.jpg'
-              alt='photo of Akshay Kallikada'
+              src='/zoro.jpg'
+              alt='photo of zoro'
               quality={100}
               priority
               height={250}
@@ -31,7 +31,7 @@ function Info() {
               </span>
             </a>
             <a
-              href='https://www.linkedin.com/in/akshaykalllikadavenugopal/'
+              href='https://www.linkedin.com/in/zoro/'
               target='_blank'
               rel='noreferrer'
             >
@@ -40,7 +40,7 @@ function Info() {
               </span>
             </a>
             <a
-              href='https://www.instagram.com/_akshaykalllikada_/'
+              href='https://www.instagram.com/zoro/'
               target='_blank'
               rel='noreferrer'
             >
@@ -49,7 +49,7 @@ function Info() {
               </span>
             </a>
             <a
-              href='https://www.behance.net/AkshayVenugopal'
+              href='https://www.behance.net/Zoro'
               target='_blank'
               rel='noreferrer'
             >
@@ -61,10 +61,10 @@ function Info() {
         </div>
 
         <div className={styles['info-text']}>
-          I am a Los Angeles based 3D generalist working in visual effects for
-          film and commercials. For the most part I am using 3ds max and Vray.
-          On the past productions my positions were modeling lead, lighting lead
-          and CG model supervisor.
+          Zoro is a muscular man of average height with lightly tanned skin. He
+          always carries his three swords along with him, bundled up with a
+          green haramaki over his right hip, allowing him to easily draw them
+          with his left hand.
         </div>
       </div>
     </section>
