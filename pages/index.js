@@ -40,7 +40,7 @@ const Home = ({ reel_images }) => {
                     alt={item.title}
                     className={styles['image-img']}
                     layout='fill'
-                    priority={i < 2}
+                    priority={i < 4}
                   />
                   <span className={styles['img-background']}></span>
                   <span className={styles['img-title']}>

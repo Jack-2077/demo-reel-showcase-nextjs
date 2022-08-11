@@ -28,8 +28,7 @@ export async function getStaticProps({ params }) {
 }
 
 export default function Reel({ reel }) {
-  const cloudfrontlink =
-    'https://d3mn3tcv16754k.cloudfront.net/PROJECTS/${reel.name}/';
+  const cloudfrontlink = `https://d3mn3tcv16754k.cloudfront.net/PROJECTS/${reel.name}/`;
   return (
     <div className='flex-container'>
       {reel.main.map((item, i) => (
@@ -38,7 +37,7 @@ export default function Reel({ reel }) {
             src={`${cloudfrontlink}${item}`}
             alt={item.title}
             layout='fill'
-            priority={i < 2}
+            priority={i < 4}
             className='image-img'
           />
         </div>

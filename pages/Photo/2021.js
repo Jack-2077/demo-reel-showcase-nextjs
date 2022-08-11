@@ -32,6 +32,7 @@ export default function Photo2021({ images }) {
             layout='fill'
             alt='Picture shot by Akshay Kalllikada'
             className='image-img'
+            priority={i < 4}
           />
         </div>
       ))}
