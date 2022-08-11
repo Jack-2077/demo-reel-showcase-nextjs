@@ -64,7 +64,7 @@
 .info-text {
   font-weight: 300;
   max-width: 85%;
-  margin: 1em auto;
+  /* margin: 1em auto; */
   font-size: 1.2em;
 }
 

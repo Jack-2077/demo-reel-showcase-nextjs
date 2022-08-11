@@ -28,13 +28,13 @@ export async function getStaticProps({ params }) {
 }
 
 export default function Reel({ reel }) {
-  const cloudfrontlink = `https://d3mn3tcv16754k.cloudfront.net/PROJECTS/${reel.name}/`;
+  const BASE_URL = `https://d3mn3tcv16754k.cloudfront.net/PROJECTS/${reel.name}/`;
   return (
     <div className='flex-container'>
       {reel.main.map((item, i) => (
         <div className='image-container' key={`${item.title}-main-${i}`}>
           <Image
-            src={`${cloudfrontlink}${item}`}
+            src={`${BASE_URL}${item}`}
             alt={item.title}
             layout='fill'
             priority={i < 4}
@@ -45,7 +45,7 @@ export default function Reel({ reel }) {
       {reel.video && (
         <div className='image-container'>
           <video autoPlay muted>
-            <source src={`${cloudfrontlink}${reel.video}`} type='video/mp4' />
+            <source src={`${BASE_URL}${reel.video}`} type='video/mp4' />
           </video>
         </div>
       )}
