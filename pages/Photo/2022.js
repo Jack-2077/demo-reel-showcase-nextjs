@@ -31,7 +31,7 @@ export default function Photo2022({ images }) {
             layout='fill'
             alt='Picture shot by Akshay Kalllikada'
             className='image-img'
-            priority={i < 4}
+            priority={i < 2}
           />
         </div>
       ))}
