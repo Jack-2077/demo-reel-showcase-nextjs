@@ -109,6 +109,16 @@
 .navlinks li a:hover {
   color: #0088a9;
 }
+@media (max-width: 800px) {
+  .header {
+    position: sticky;
+  }
+
+  .removeBgColor,
+  .addBgColor {
+    background-color: black;
+  }
+}
 
 @media (max-width: 510px) {
   .header {
