@@ -1,26 +1,39 @@
-import React, { useEffect, useState } from 'react';
+import React, { memo, useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
 
 import styles from '../styles/Navbar.module.css';
 
 import Image from 'next/image';
 import Link from 'next/link';
 
-export default function Navbar() {
+function Navbar() {
+  const router = useRouter();
   const [show, setShow] = useState(false);
 
+  const url = router.asPath;
+
   useEffect(() => {
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 250) {
-        setShow(true);
-      } else setShow(false);
-    });
+    if (url === '/') {
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 250) {
+          setShow(true);
+        } else setShow(false);
+      });
+    }
+
     return () => {
       window.removeEventListener('scroll', null);
     };
   }, []);
 
+  const headerStyles = url !== '/' ? styles.addBgColor : '';
+
   return (
-    <header className={`${styles.header} ${!show ? styles.removeBgColor : ''}`}>
+    <header
+      className={`${styles.header} ${headerStyles} ${
+        !show ? styles.removeBgColor : ''
+      }`}
+    >
       <div className={styles.logo}>
         <Link href='/'>
           <a title='Akshay Kalllikada'>
@@ -60,3 +73,5 @@ export default function Navbar() {
     </header>
   );
 }
+
+export default Navbar;

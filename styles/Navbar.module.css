@@ -28,6 +28,11 @@
   background-color: transparent;
 }
 
+.addBgColor {
+  position: sticky;
+  background-color: black !important;
+}
+
 .navlinks {
   list-style: none;
 }
