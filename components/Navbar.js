@@ -34,42 +34,44 @@ function Navbar() {
         !show ? styles.removeBgColor : ''
       }`}
     >
-      <div className={styles.logo}>
-        <Link href='/'>
-          <a title='Akshay Kalllikada'>
-            <Image
-              src='/logo.png'
-              alt='logo'
-              layout='responsive'
-              priority
-              width={80}
-              height={80}
-            />
-          </a>
-        </Link>
-      </div>
+      <div className={styles.container}>
+        <div className={styles.logo}>
+          <Link href='/'>
+            <a title='Akshay Kalllikada'>
+              <Image
+                src='/logo.png'
+                alt='logo'
+                layout='responsive'
+                priority
+                width={80}
+                height={80}
+              />
+            </a>
+          </Link>
+        </div>
 
-      <nav className={styles.navlinks}>
-        <ul>
-          <li>
-            <Link href='/Info'>Info</Link>
-          </li>
-          <li>
-            <div className={styles.dropdown}>
-              <a className={styles.dropbtn}>
-                Photo <i className={styles.arrow}></i>
-              </a>
-              <div className={styles['dropdown-content']}>
-                <Link href='/Photo/2021'>2021</Link>
-                <Link href='/Photo/2022'>2022</Link>
+        <nav className={styles.navlinks}>
+          <ul>
+            <li>
+              <Link href='/Info'>Info</Link>
+            </li>
+            <li>
+              <div className={styles.dropdown}>
+                <a className={styles.dropbtn}>
+                  Photo <i className={styles.arrow}></i>
+                </a>
+                <div className={styles['dropdown-content']}>
+                  <Link href='/Photo/2021'>2021</Link>
+                  <Link href='/Photo/2022'>2022</Link>
+                </div>
               </div>
-            </div>
-          </li>
-          <li>
-            <Link href='/'>Work</Link>
-          </li>
-        </ul>
-      </nav>
+            </li>
+            <li>
+              <Link href='/'>Work</Link>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
   );
 }

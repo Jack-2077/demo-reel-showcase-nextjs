@@ -21,6 +21,7 @@ body {
   -webkit-font-smoothing: antialiased;
   background-color: black;
   color: white;
+  font-family: 'Roboto', sans-serif;
 }
 
 img,

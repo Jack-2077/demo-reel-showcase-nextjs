@@ -42,19 +42,17 @@ export default function Reel({ reel }) {
   const BASE_URL = `https://d3mn3tcv16754k.cloudfront.net/PROJECTS/${reel.name}/`;
   return (
     <div className='flex-container'>
-      <section>
-        <div>
-          <div className={styles['test']}>
-            {['title', 'year', 'role', 'brief'].map((item) => (
-              <div key={item} className={styles['description']}>
-                <p className={styles['title']}>{item}</p>
-                <p className='brief'>{test[item]}</p>
-              </div>
-            ))}
-          </div>
+      <section className={styles['reel-info']}>
+        <div className={styles['reel-info-container']}>
+          {['title', 'year', 'role', 'brief'].map((item) => (
+            <div key={item} className={styles['reel-description']}>
+              <p className={styles['reel-title']}>{item}</p>
+              <p className={styles['reel-brief']}>{test[item]}</p>
+            </div>
+          ))}
         </div>
       </section>
-      {/* {reel.main.map((item, i) => (
+      {reel.main.map((item, i) => (
         <div className='image-container' key={`${item.title}-main-${i}`}>
           <Image
             src={`${BASE_URL}${item}`}
@@ -71,7 +69,7 @@ export default function Reel({ reel }) {
             <source src={`${BASE_URL}${reel.video}`} type='video/mp4' />
           </video>
         </div>
-      )} */}
+      )}
     </div>
   );
 }
