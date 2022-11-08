@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import styles from '../../styles/Reel.module.css';
 
 export async function getStaticPaths() {
   const resp = await fetch(
@@ -27,11 +28,33 @@ export async function getStaticProps({ params }) {
   };
 }
 
+const test = {
+  id: 1,
+  name: '01.GASSTATION/06.jpg',
+  year: '2020',
+  role: 'Concept, Modelling, Layout, Texturing, Shading, Lighting, Compositing & color grading.',
+  brief:
+    'This is a personal project I did during my time at school and the objective here was to create a night scene from a reference image.',
+  title: 'GASSTATION',
+};
+
 export default function Reel({ reel }) {
   const BASE_URL = `https://d3mn3tcv16754k.cloudfront.net/PROJECTS/${reel.name}/`;
   return (
     <div className='flex-container'>
-      {reel.main.map((item, i) => (
+      <section>
+        <div>
+          <div className={styles['test']}>
+            {['title', 'year', 'role', 'brief'].map((item) => (
+              <div key={item} className={styles['description']}>
+                <p className={styles['title']}>{item}</p>
+                <p className='brief'>{test[item]}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* {reel.main.map((item, i) => (
         <div className='image-container' key={`${item.title}-main-${i}`}>
           <Image
             src={`${BASE_URL}${item}`}
@@ -48,7 +71,7 @@ export default function Reel({ reel }) {
             <source src={`${BASE_URL}${reel.video}`} type='video/mp4' />
           </video>
         </div>
-      )}
+      )} */}
     </div>
   );
 }

@@ -1,0 +1,30 @@
+/* .sec {
+  -webkit-column-width: 150px;
+  -moz-column-width: 150px;
+  column-width: 150px;
+} */
+
+/* .sec {
+  -webkit-column-width: 150px;
+  -moz-column-width: 150px;
+  column-width: 150px;
+} */
+
+.test {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1228px;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  padding: 0 calc(8px + 1.5625vw) 0.5em;
+}
+
+.title {
+  text-transform: capitalize;
+  font-weight: bold;
+}

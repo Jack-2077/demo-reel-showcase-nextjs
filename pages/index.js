@@ -3,19 +3,29 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styles from '../styles/Home.module.css';
 
-export async function getStaticProps() {
-  const resp = await fetch(
-    'https://d3mn3tcv16754k.cloudfront.net/demo_reels.json'
-  );
+// export async function getStaticProps() {
+//   const resp = await fetch(
+//     'https://d3mn3tcv16754k.cloudfront.net/demo_reels.json'
+//   );
 
-  return {
-    props: {
-      reel_images: await resp.json(),
-    },
-  };
-}
+//   return {
+//     props: {
+//       reel_images: await resp.json(),
+//     },
+//   };
+// }
 
-const Home = ({ reel_images }) => {
+// const Home = ({ reel_images }) => {
+
+const reel_images = [
+  {
+    id: 1,
+    name: '01.GASSTATION/06.jpg',
+    title: 'GASSTATION',
+  },
+];
+
+const Home = () => {
   return (
     <>
       <section>
