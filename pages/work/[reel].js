@@ -28,16 +28,6 @@ export async function getStaticProps({ params }) {
   };
 }
 
-const test = {
-  id: 1,
-  name: '01.GASSTATION/06.jpg',
-  year: '2020',
-  role: 'Concept, Modelling, Layout, Texturing, Shading, Lighting, Compositing & color grading.',
-  brief:
-    'This is a personal project I did during my time at school and the objective here was to create a night scene from a reference image.',
-  title: 'GASSTATION',
-};
-
 export default function Reel({ reel }) {
   const BASE_URL = `https://d3mn3tcv16754k.cloudfront.net/PROJECTS/${reel.name}/`;
   return (
@@ -47,7 +37,7 @@ export default function Reel({ reel }) {
           {['title', 'year', 'role', 'brief'].map((item) => (
             <div key={item} className={styles['reel-description']}>
               <p className={styles['reel-title']}>{item}</p>
-              <p className={styles['reel-brief']}>{test[item]}</p>
+              <p className={styles['reel-brief']}>{reel[item] || '-'}</p>
             </div>
           ))}
         </div>
